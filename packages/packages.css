@@ -1,0 +1,48 @@
+main {
+	padding: 30px 0;
+}
+
+.plan a{
+	text-decoration: none;
+	color: black;
+}
+
+.plan {
+	background: #98FB98;
+	border: 2px solid #0e4f1f;
+	padding: 30px;
+	margin: 20px;
+	width: 60%;
+	vertical-align: center;
+}
+
+.plan:hover {
+	cursor: pointer;
+	border: 2px solid red;
+}
+
+.plan__highlighted {
+	background: #0e4f1f;
+}
+
+.plan__title {
+	color: black;
+}
+
+.plan__subtitle {
+	color: #858585;
+}
+
+.plan__title--highlighted {
+	color: white;
+}
+
+.plan__subtitle--highlighted {
+	color: #858585;
+}
+
+.plan__description {
+	background: white;
+	border: 2px solid black;
+	padding: 8px;
+}
