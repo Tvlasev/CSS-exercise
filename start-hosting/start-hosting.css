@@ -24,7 +24,6 @@ main {
     width: 100%;
 }
 
-/* .signup-form input[type="checkbox"] */
 .signup-form input[id*="terms"],
 .signup-form input[id*="terms"] + label {
     display: inline-block;

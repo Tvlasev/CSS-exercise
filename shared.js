@@ -1,25 +1,18 @@
-var backdrop = document.querySelector(".backdrop");
-var modal = document.querySelector(".modal");
-var modalNoButton = document.querySelector(".modal__action--negative");
-var selectPlanButtons = document.querySelectorAll(".plan button");
-var toggleButton = document.querySelector(".toggle-button");
-var mobileNav = document.querySelector(".mobile-nav");
+const backdrop = document.querySelector(".backdrop");
+const modal = document.querySelector(".modal");
+const modalNoButton = document.querySelector(".modal__action--negative");
+const selectPlanButtons = document.querySelectorAll(".plan button");
+const toggleButton = document.querySelector(".toggle-button");
+const mobileNav = document.querySelector(".mobile-nav");
 
-// console.dir(backdrop.style['background-image']);
-
-// console.dir(backdrop);
-for (var i = 0; i < selectPlanButtons.length; i++) {
-  selectPlanButtons[i].addEventListener("click", function() {
-    // modal.style.display = "block";
-    // backdrop.style.display = "block";
-    // modal.className = 'open'; // This will actually overwrite the complete class list
+for (let i = 0; i < selectPlanButtons.length; i++) {
+  selectPlanButtons[i].addEventListener("click", () => {
     modal.classList.add("open");
     backdrop.classList.add("open");
   });
 }
 
-backdrop.addEventListener("click", function() {
-  // mobileNav.style.display = 'none';
+backdrop.addEventListener("click", () => {
   mobileNav.classList.remove("open");
   closeModal();
 });
@@ -28,18 +21,14 @@ if (modalNoButton) {
   modalNoButton.addEventListener("click", closeModal);
 }
 
-function closeModal() {
-  //   backdrop.style.display = "none";
-  //   modal.style.display = "none";
+const closeModal() => {
   if (modal) {
     modal.classList.remove("open");
   }
   backdrop.classList.remove("open");
 }
 
-toggleButton.addEventListener("click", function() {
-  // mobileNav.style.display = 'block';
-  // backdrop.style.display = 'block';
+toggleButton.addEventListener("click", () => {
   mobileNav.classList.add("open");
   backdrop.classList.add("open");
 });
